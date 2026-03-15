@@ -40,5 +40,77 @@
         <p>All fields are required.</p>
       </div>
 
-      <form id="feedback-form" novalidate>
+<form id="feedback-form" novalidate>
         <div class="fields" id="fields-wrapper">
+
+          <!-- Name -->
+          <div class="field" data-field="name">
+            <label for="user-name">Your Name</label>
+            <input type="text" id="user-name" placeholder="Caoy Blake"
+              data-tooltip="Enter your full name" data-max="60"/>
+            <span class="char-count" id="count-name">0 / 60</span>
+            <span class="error" id="err-name"></span>
+          </div>
+
+          <!-- Email -->
+          <div class="field" data-field="email">
+            <label for="user-email">Email Address</label>
+            <input type="email" id="user-email" placeholder="email123@example.com"
+              data-tooltip="We only use this to follow up" data-max="80"/>
+            <span class="char-count" id="count-email">0 / 80</span>
+            <span class="error" id="err-email"></span>
+          </div>
+
+          <!-- Rating -->
+          <div class="field" data-field="rating">
+            <label>Rating</label>
+            <div class="stars" id="rating-wrap"
+              data-tooltip="Click a star to rate us">
+              <button type="button" class="star" data-value="1">★</button>
+              <button type="button" class="star" data-value="2">★</button>
+              <button type="button" class="star" data-value="3">★</button>
+              <button type="button" class="star" data-value="4">★</button>
+              <button type="button" class="star" data-value="5">★</button>
+            </div>
+            <input type="hidden" id="user-rating" value=""/>
+            <span class="error" id="err-rating"></span>
+          </div>
+
+          <!-- Comments -->
+          <div class="field" data-field="comments">
+            <label for="user-comments">Comments</label>
+            <textarea id="user-comments" rows="4"
+              placeholder="What did you Enjoy? What could be better?"
+              data-tooltip="Share anything — we read every reply"
+              data-max="400"></textarea>
+            <span class="char-count" id="count-comments">0 / 400</span>
+            <span class="error" id="err-comments"></span>
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn submit-btn">Submit Feedback →</button>
+      </form>
+    </section>
+
+    <!-- SUBMITTED FEEDBACK -->
+    <section class="responses" id="responses">
+      <h3>Recent Responses</h3>
+      <div id="feedback-display">
+        <p class="empty">No responses yet. Be the first!</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- TOOLTIP -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>◆ NutriAI</span>
+    <span>© 2026 NutriAI Inc.</span>
+  </footer>
+
+  <script src="cp_1.js"></script>
+</body>
+</html>
