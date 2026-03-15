@@ -204,9 +204,7 @@ form.addEventListener('submit', function (e) {
 });
 
 
-// ─────────────────────────────────────
-// BUILD AND INSERT A FEEDBACK CARD
-// ─────────────────────────────────────
+
 function addCard(entry) {
   // Remove the "no responses" message
   const empty = feedbackDisplay.querySelector('.empty');
